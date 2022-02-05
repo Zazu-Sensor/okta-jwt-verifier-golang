@@ -207,6 +207,10 @@ func (j *JwtVerifier) validateNonce(nonce interface{}) error {
 }
 
 func (j *JwtVerifier) validateAudience(audience interface{}) error {
+	// "aud" claim is optional
+	if audience == nil {
+		return nil
+	}
 	switch v := audience.(type) {
 	case string:
 		if v != j.ClaimsToValidate["aud"] {
