@@ -24,8 +24,9 @@ import (
 
 	"github.com/lestrrat-go/jwx/jwk"
 	"github.com/lestrrat-go/jwx/jws"
-	"github.com/okta/okta-jwt-verifier-golang/adaptors"
 	"github.com/patrickmn/go-cache"
+
+	"github.com/Zazu-Sensor/okta-jwt-verifier-golang/adaptors"
 )
 
 var (
